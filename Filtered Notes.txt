@@ -1,0 +1,581 @@
+INTRONATION TO RUBY
+
+Ruby is a pure Object-Oriented language developed by Yukihiro Matsumoto 
+(also known as Matz in the Ruby community) in the mid 1990’s in Japan. 
+Stable version 3.2.1
+
+Advantages
+1) Lesser line to write while typing the program
+2) Because of simplisity user can easily create web app.
+3) Free and open source with large commnunity and build in libraries
+4) Dynamically typed Language
+5) It is More human readable form
+
+Disadvantages
+1) Hard to debug
+2)Dont have much information resources 
+3)Because of interpreator it becomes slower than other compile time language
+
+
+SIMMILARITIES BETWEEN C AND RUBY
+
+1)We can do procedural language like c insted of OOPS
+2)Simmilar Operators but dont have ++ like C
+3)In Both string are written in " " quotes
+4)Command line debugger is provided
+5)Using ri we can read doc in terminal in both language
+
+
+INSTALLATION GUID 
+
+sudo apt install ruby-full
+
+ruby --version
+
+
+----------------------------------------------------------------------------------------------------------------
+
+                                                PRINTING STATEMENT
+There are three ways to print the statements
+1)print:- prints the statement in the manner in which we can given the statement
+    syntx:- print "Hi 
+    I am Rehan"
+    O/P:- Hi
+    I am Rehan
+
+2)puts:- puts print the statement and after printing it breaks the line
+    syntx:-puts"hi"
+    O/P:- hi
+
+3)p:- helps in inspecting the code also return the value in return type function
+
+
+                                                KEYWORDS
+There are 41 reserved word in ruby
+some of them are :-
+class ,  if , new , do , else , break , null ,  initialize , puts , etc
+
+
+                                                DATA-TYPE
+
+There are different data types in Ruby as follows:
+
+Numbers
+Boolean
+Strings
+Hashes
+Arrays
+Symbols
+
+
+                                                VARIABLES
+There are different types of variables in Ruby:
+
+Local variables {}
+Instance variables @
+Class variables  @@
+Global variables  $
+
+
+                                                RANGE
+
+Range is a method which helps in iterating the execution of the code 
+(..) will print the all the value from staring to end including both the starting and ending value
+syntax:-  
+(1..3).each do |i|
+    puts i
+end
+
+o/p:-
+1
+2
+3
+
+(...)will print the value from starting to n-1
+(1...3).each do |i|
+    puts i
+end
+
+o/p:-
+1
+2
+                  
+                                                
+                                                LITERALS
+
+Any constant value which can be assigned to the variable is called as literal/constant.
+
+
+
+                                                OPERATOR
+
+Arthimetic Operator:- + - / * 
+Comparison Operators:- > < = == <= ! !=
+Logical Operator:- (And)&&  (OR)|| (NOT)!
+Assignment Operators:- = += -= *= /= %= **=
+
+
+                                                UNLESS 
+
+unless statement are same as if else condition just the difference is that when the condition is false it enters in unless part not in else part
+
+keyword:- unless | else
+
+Syntax:- 
+a=1 
+unless a>4
+    puts "a is less"
+else 
+    puts "a is more"
+end
+
+Another way
+
+result=unless a>4 ? "a is less" : "a is more"
+
+----------------------------------------------------------------------------------------------------------------
+
+                                                CONDITIONAL STATEMENT
+
+In Ruby, the if-else statement is used to test the specified condition. 
+
+Decision-Making Statements in Ruby: 
+
+if statement
+keyword:- if
+syntax:- 
+var =10
+if var<=10
+    puts "Value is Less Than Or Equal To #{var}"
+end
+O/P:-Value is Less Than Or Equal To 10
+
+if-else statement
+keyword:- if else 
+syntax:-
+var =10
+if var>20
+    puts "Value is Greater than 20 =>#{var}"
+else 
+    puts "Value is Less Than 20=>#{var}"
+end
+O/P:-Value is Less Than 20=>10
+
+if – elsif ladder
+keyword:- if elsif else
+syntax:-
+var=0
+if var>10
+    puts "Value is Greater than 10"
+elsif var==0
+    puts "Value is Equal to 0"
+else 
+    puts "Value is Lesser than 10"
+end
+O/P:-Value is Equal to 0
+
+Ternary statement
+symbols:- ? :
+syntax:-
+var=10
+data=(var>5) ? "Greater" : "Smaller"
+puts data
+O/P:- Greater
+
+
+                                                LOOPING STATEMENT
+
+Ruby provides the different types of loop to handle the condition based situation in the program to make the programmers task simpler. The loops in Ruby are :
+  
+while loop
+keyword:- while
+syntax:-
+var = 3
+while var>=1
+    puts var
+end
+O/P:-
+3
+2
+1
+
+for loop
+keyword:- for do 
+syntax:-
+for var (1..5) do 
+    print "#{var} "
+end
+O/P:-1 2 3 4 5
+
+do..while loop
+keyword:- loop do if break
+syntax:-
+var = 5
+loop do 
+    puts var
+    var=var-1
+    if var<=2
+        break
+    end
+end
+O/P:-
+5
+4
+3
+2
+
+until loop
+
+
+                                                BREAK/NEXT STATEMENT
+
+Break keyword helps in terminating the loops of the code 
+keyword:- break
+syntax :-
+var = 5 
+while var>=1
+    puts var
+    var=var-1
+    if(var==2)
+        break
+    end
+end
+O/P:-
+5
+4
+3
+2
+
+Next keyword helps to skips the current looping iteration and jump to rest statement
+keyword:-Next
+var =5
+
+while var>=1
+    if var==3
+        next 
+    else
+        puts var
+        var=var-1
+    end
+end
+O/P:-
+5
+4
+2
+1
+
+
+                                                FILE HANDLING                                
+
+File Handling helps in processing the file content which can be:-
+creating the file 
+reading the file 
+writing the file
+deleting the file
+in the OS 
+
+keyword:-File , w+ , r+ , r , w , a+ , a , readlines
+function:- syswrite("<Written Statements>") , close() , sysread(<number of character to read>) ,
+open("<File Name>","<file mode type>") , read() , rename("<Old File Name>","<New File Name>") , 
+delete("<file name>") , file?("<file name>") ,readable?("<file name>") , writable?("<file name>")
+
+To Create a writeable File 
+syntax:- 
+fl=File.new("Hello World.txt","w+")
+
+To write in the file
+syntax:-
+fl.syswrite("Writeen through Ruby Code")
+
+To Close the File
+syntax:-
+fl.close()
+
+To Read a File 
+syntax:-
+fl=File.open("Hello World.txt","r")
+fl.sysread(20)
+
+To Read full File data
+syntax:-
+print(fl.read())
+
+To Rename the File
+syntax:-
+fl.rename("Hello World.txt" , "Ruby File.txt")
+
+To Delete the File
+syntax:-
+fl.delete("Ruby File.txt")
+
+To Check The Existence Of the FILE
+Syntax:-
+fl.file?("Ruby File.txt")
+
+To Check the readablity of the file 
+syntax:-
+fl.readable?("Ruby File.txt")
+
+To Cheak the Writable File
+syntax:-
+fl.writable?("Ruby File.txt")
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                                METHOD
+
+methods are the block of code which can be used multiple time just by calling its name 
+
+syntax:-
+def functionName(<parameters>)
+    body
+end
+
+Functions can be number of types:-
+
+takes nothing return nothing
+syntax:- 
+def functionName 
+    puts"Hi"
+end
+
+takes something return nothing
+syntax:-
+def functionName(_var1,_var2)
+    puts "#{var1 + _var2}"
+end
+
+takes nothing return something
+syntax:-
+def functionName
+    sum=num+num2
+    return sum
+end
+
+takes something return something
+
+def functionName(num , num2)
+    sum=num+num2
+    return sum
+end
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                                METHOD VISIBILITY
+
+
+Method visibility tells the scope of the method and tell its aeccessability in the class and outside the class
+
+Method visibility are of no. of types:-
+
+Public visibility 
+keyword:-public
+syntax:-
+class Functions
+    
+    public 
+
+    def fun 
+        puts "Public Function"
+    end 
+
+end 
+
+fn=Functions.new
+fn.fun
+O/P:-Public Function
+
+
+Private visibility
+keyword:-private
+syntax:-
+class Functions
+    private
+    def fun
+        puts"Private Function"
+    end
+
+    public 
+    def fun2
+        fun
+    end
+end
+
+fn=Functions.new
+fn.fun2
+O/P:-Private Function
+
+
+Protected visibility
+keyword:-private
+syntax:-
+class Functions
+
+    protected 
+    def fun
+        puts "Protetcted Function"
+    end
+
+    public 
+    def fun2
+        fun
+    end
+
+end
+
+fn=Functions.new
+fn.fun2
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                        INITIALIZE METHOD/CONSTRUCTOR
+
+initialize method is a speacal method of the class which is called automatically when the object is created 
+of the class 
+
+keyword:-initialize
+syntax:-
+class animal
+    def initialize
+        puts "Woof"
+    end
+end
+
+an=animal.new
+O/P:-Woof
+
+we can also pass the parameters in it
+
+class animal
+    @@var
+    @@var2
+    def initialize(_var1,_var2)
+        @@var=_var1
+        @@var2=_var2
+        puts #{@@var+@@var2}
+    end
+end
+
+an=animal.new(2,4)
+O/P:-6
+
+----------------------------------------------------------------------------------------------------------------
+
+                                        DATE AND TIME METHOD
+
+Date and Time method helps to fetch the date and time of the computer and disaplau it on the screen
+there are many types of pre define methods to fetch the date and time
+
+keyword:-Time , .inspect , .year , .month , .day , .hour , .min , .sec , .usec , .zone , date 
+
+syntax:-
+class DateAndTime
+    
+    def initializer
+        puts"Date And Time"
+    end
+
+    def fun
+        t=Time.new
+        puts t.inspect
+        puts t.year
+        puts t.month
+        puts t.day
+        puts t.hour
+        puts t.min
+        puts t.sec
+        puts t.usec
+        puts t.zone
+        require 'date'
+        puts Time.new(2023,3,3).to_date
+        puts Date.jd(2590110)
+    end
+end
+
+dt=DateAndTime.new
+dt.fun
+O/P:-
+2023-03-03 12:14:35.234482475 +0530
+2023
+3
+3
+12
+14
+35
+234482
+IST
+2023-03-03
+2379-05-19
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                       PRIVATE CLASS
+private class can not be access by creating its Method but can be access by a public method which is 
+created outside the private class by creating private class object and calling the function inside of the outer method
+
+keyword:-private_constant :PrivateClass
+
+syntax:-
+class PublicClass
+    
+    class PrivateClass
+        def Function
+            puts "Private Class Function Is called"
+        end
+    end
+
+    def fun
+        PrivateClass.new.Function
+    end
+
+    private_constant :PrivateClass
+end
+
+PublicClass.new.fun
+O/P:-Private Class Function Is called
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                       INHARITENCE 
+
+class ParentClass
+    @@var
+    @@var2
+
+    def setData1(_var1)
+        @@var=_var1
+    end 
+
+    def setData2(_var2)
+        @@var2=_var2
+    end
+
+    def getData
+        return @@var
+    end
+
+    def getData2
+        return @@var2
+    end
+end
+
+class BaseClass < ParentClass
+
+bc=BaseClass.new
+bc.setData1(10)
+bc.setData2(20)
+puts bc.getData
+puts bc.getData2
+O/P:-
+10
+20
+
+
+----------------------------------------------------------------------------------------------------------------
