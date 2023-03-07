@@ -579,3 +579,207 @@ O/P:-
 
 
 ----------------------------------------------------------------------------------------------------------------
+
+
+                                      METHOD OVERLOADING
+In this when we create same name function multiple times but different parameters in the method .
+Syntax:-
+def fun 
+    puts"No parameters function"
+end
+
+def fun(_var)
+    puts "Single parameter function with same name"
+end
+
+def fun(_var,_var2)
+    puts "Double parameters function with same name"
+end
+
+NOTE we can't call all the same name functions at the same time because it will be comsidered as method
+Overriding
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                      METHOD OVERRIDING 
+In this we can create same name function in different class with different function parameter and body
+Syntax:-
+class Parent
+    def fun
+        puts "Parent Function"
+    end
+end
+
+class Child < Parent
+    def fun 
+        puts "Child class Function"
+    end 
+end 
+
+class Child2 < Parent
+    def fun(_var) 
+        puts "Child Class Function with parameter #{_var}"
+    end
+end 
+
+pr=Parent.new
+pr.fun
+ch1=Child.new
+ch1.fun
+ch2=Child2.new
+ch2.fun(10)
+O/P:-
+Parent Function
+Child class Function
+Child class Function with parameter 10
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                      POLYMORPHISM
+The term polymorphism is derived frim two words poly which means many and morph which means forms."Many Forms"
+It is a method where one method can be execued in many different types in differnt class or in same class
+polymorphism can easily visible in Method overloading and Method Overriding concept 
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                      ENCAPSULATION
+It means grouping all the simmilar type of data into single unit and making it private so that no other can 
+access that data . If any user want to access the data , it can only be access by their public function.
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                      MIXIN
+Since ruby do not allow multiple inharitence and to perform multiple inharitence we need to use Mixin. 
+We can access the class by using module keyword insted of class which u want to inharit in the child class
+by using include keyord by include it in the child class
+
+keyord:- module , include
+syntax:-
+module Parent
+    def fun1
+        puts "Parent class Function"
+    end
+end 
+
+module Parent2
+    def fun2 
+        puts "Parent2 class Function"
+    end 
+end 
+
+class Child 
+    include Parent
+    include Parent2
+    def fun3
+        puts "child Class function"
+    end
+end 
+
+ch=Child.new
+ch.fun
+ch.fun2
+ch.fun3 
+O/P:-
+Parent class Function 
+Parent2 class Function
+Child Class Function
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                      ABSTRACTION
+It is a process of data hiding and mainly use by the software development for increasing the data security
+and aeccessability of any data . Since everyone can not access every data in the code so by making it 
+private we can limit the aeccessability of the code .
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                      EXCEPTION HANDLING
+It is a way countring the error which comes during the run time or which can come in feature . So to prevent
+this we use exception handling in program
+
+Using Begin / Rescue
+
+Begin:- Here that code is written where exception  occur
+Rescue:- Here that code is written what you want to perform after exception occur 
+Ensure:- Here that code is written which is used to get executed everytime at the end of exception as it runs 
+everytime weather their is exception or not 
+keyord:- begin , rescue , ensure
+Syntax:-
+def fun
+    begin 
+        num=10/0
+        puts num
+        rescue => e 
+            puts "Cant Devide By zero #{e}"
+        ensure 
+            puts "exception complete"
+    end
+end
+fun()
+O/P:-Cant Devide By zero <Actual exception statement prints here>
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                      ATTRIBUTE ACCESSOR VARIABLES
+attribute access variable helps to set the variable access type i.e, weather the variable is readable , 
+writeable or in both form .
+
+keyord:- attr_reader , attr_writer , attr_accessor
+
+Attr_Reader:- it makes the variable in only readable form
+syntax 
+class Reader 
+    attr_reader: book
+    def initialize(book)
+        @book=book
+    end 
+end
+rdr=Reader.new("Harry Potter")
+puts rdr.book 
+O/P:- Harry Potter
+
+Attr_Writer:- it makes the variable in only writable form 
+syntax:-
+class Writer 
+    attr_writer: content 
+    def initialize(content)
+        @content=content
+    end 
+end 
+wrt=Writer.new("opculis repairo")
+wrt.content="abraka davra"
+
+Attr_Accessor:- it makes variable both readable and writable
+syntax:-
+class ReadWrite
+    attr_accessor: book , :content
+    def initialize(_book,_content)
+        @book=_book
+        @content=_content
+    end
+end 
+rwt=ReadWrite.new("Dumbaldor","wingadian Laviosa")
+puts "Data before changing => #{rwt.book} #{rwt.content}"
+rwt.book="Harry Potter"
+rwt.content="Abraka Davra"
+puts "Data after changing => #{rwt.book} #{rwt.content}"
+O/P:-
+Data before changing => Dumbaldor wingadian Laviosa
+Data after changing => Harry Potter Abraka Davr
+
+
+----------------------------------------------------------------------------------------------------------------
