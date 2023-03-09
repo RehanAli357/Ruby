@@ -783,3 +783,108 @@ Data after changing => Harry Potter Abraka Davr
 
 
 ----------------------------------------------------------------------------------------------------------------
+
+
+                                      REGULAR EXPRESSION
+regular expression helps to check the particular string data or set of character from the given string if data found 
+then return 1 else return nil or nothing
+
+to find the string:-
+method:-match(/<String>/)
+syntax:-
+def Matching(_var,_var2)
+    if(_var.match(/#{_var2}))
+        puts "Found"
+    else
+        puts "Not Found"
+    end 
+end 
+Matching("Hi I am rehan","rehan")
+O/P:-Found
+
+to find the set of character:-
+def Matching(_var,_var2)
+    if(_var=~/#{[_var2]}/)
+        puts "Found"
+    else
+        puts "Not Found"
+    end 
+end 
+Matching("Hi I am rehan","aeiou")
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                      SEARCH AND REPLACE  
+replace method helps to replace the particular part of string from the given string provided by the user and 
+update it .
+
+method:-gsub("<Old String>" , "<New String>")
+syntax 
+data="Hi i am Rehan"
+data=data.gsub("Rehan","Rehan ali")
+puts data 
+O/P:- Hi i am Rehan ali
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                      MODULES 
+module is like a class whoes object cant be made . This module class's methods can be used in other class or in
+other file class of  ruby by giving the path of the file and using it in the other file .
+
+keyord:-module , include 
+syntax:-
+In File 1:- 
+module ParentClass
+    def hi(_var)
+        puts "hi  #{_var}"
+    end
+end 
+
+In File 2:-
+class ChileClass
+    include ParentClass
+    def bye(_var)
+        puts "bye  #{_var}"
+    end 
+end 
+
+ch=ChileClass.new 
+ch.bye("Rehan")
+ch.hi("Ali")
+O/P:- 
+hi Rehan
+bye Ali 
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                             ARRAYS 
+Arrays is a data type whicg used to store multiple data init which can be both homogenious and hetrogenious 
+data . every data has an index position which used to start from 0 and end till size-1
+syntax:-
+To Provide the Size of the array:-
+data=Array.new(<size>)
+
+To Provide the data 
+arr=Array[27,28,"abc",true,872.2]
+
+There are many methods to perform different task in the array 
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+                                             STRING 
+string is a mutable data type which holds the multiple set of data in the quotes ""/''
+syntax :-
+data ="Hi this is string data"
+
+There are many methods to perform different task in the string 
+
+
+----------------------------------------------------------------------------------------------------------------
