@@ -39,9 +39,9 @@ end
 
 fl=Files.new()
 #fl.writeFun
-#fl.readFun
+fl.readFun
 #fl.renameFun
 #fl.isFileFun
 #fl.isReadableFun
 #fl.isWritableFun
-fl.deleteFun
+#fl.deleteFun
