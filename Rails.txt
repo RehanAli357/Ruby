@@ -1,0 +1,55 @@
+
+                                            INTRODUCTION TO RAILS
+
+Rails is a web application development framework written in the Ruby programming language. 
+It is designed to make programming web applications easier by making assumptions about what 
+every developer needs to get started.
+It allows you to write less code while accomplishing more than many other languages and frameworks. 
+
+                                            INSTALLATION OF RAILS
+Before downloading rails user should have ruby and sqlite3 installed in the system . 
+And to check that ruby and  sqlite3 is there or not 
+use:-
+$ ruby --version
+$ sqlite3 --version
+
+To install rails in the system use:- 
+$ gem install rails 
+after that to check if rails installed in the system:-
+$ rails --version 
+
+To create an application of rails in the system
+$rails new <appName>
+then switch the directery to the <appName>:-
+$ cd <appName>
+
+You will find many types of folder in your rails application after creating an app such as:-
+app/
+bin/
+config/
+db/
+etc
+
+--------------------------------------------------------------------------------------------------------
+
+                                            HELLO WORLD
+
+To create a Page use:-
+rails generate controller <dirName> <filename>
+eg:-
+rails g controller Hme index
+It will create a file in App > views > Home >index.html.erb
+[!Note - Because of .erb extension we can write ruby code in html doc.]
+Open index.html.erb and type your html code in the file:-
+<h1>Hello World</h1>
+
+
+To create a index.html.erb file as a root file go to 
+Config > routes.rb 
+and type root '<dirName>#<fileName>' in between the ...do [] ...end 
+eg:- root 'Home#index.html.erb'
+
+
+[!Note while we will create a new file automatically a new <FolderName>_controller.br file 
+will be created in cpntrollers folder and new route will be added in route.rb file or user can 
+create the file manually]

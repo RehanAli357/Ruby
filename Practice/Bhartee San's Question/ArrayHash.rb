@@ -143,7 +143,31 @@
 # end
 # puts hashdata
 
+#QUESTION9 
+# [[:student, "Terrance Koar"], [:course, "Web Dev"], [:class, "1st"]]
+# arr=[[:student, "Terrance Koar"], [:course, "Web Dev"], [:class, "1st"]]
+# hashdata={}
+# key=[]
+# data=[]
+# tempdata=[]
+# for i in 0..arr.length-1 do 
+#     for j in 0..arr[0].length-1 do
+#         if arr[i][j].class==Symbol
+#             key.push(arr[i][j])
+#         else
+#             data.push(arr[i][j])
+#         end
+#     end
+# end
 
+# for i in 0..data.length-1 do 
+#     tempdata.push(data[0].split)
+# end
+
+# for i in 0..key.length-1 do 
+#     hashdata[key[i]]=data[i].split
+# end
+# puts hashdata
 
 #QUESTION 10
 #values = %w[ ride the dragon ]
@@ -156,28 +180,3 @@
 
 
 
-#QUESTION9 
-# [[:student, "Terrance Koar"], [:course, "Web Dev"], [:class, "1st"]]
-arr=[[:student, "Terrance Koar"], [:course, "Web Dev"], [:class, "1st"]]
-hashdata={}
-key=[]
-data=[]
-tempdata=[]
-for i in 0..arr.length-1 do 
-    for j in 0..arr[0].length-1 do
-        if arr[i][j].class==Symbol
-            key.push(arr[i][j])
-        else
-            data.push(arr[i][j])
-        end
-    end
-end
-
-for i in 0..data.length-1 do 
-    tempdata.push(data[0].split)
-end
-
-for i in 0..key.length-1 do 
-    hashdata[key[i]]=data[i].split
-end
-puts hashdata

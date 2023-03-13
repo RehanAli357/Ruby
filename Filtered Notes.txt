@@ -1,6 +1,6 @@
 INTRONATION TO RUBY
 
-Ruby is a pure Object-Oriented language developed by Yukihiro Matsumoto 
+ Ruby is a pure Object-Oriented language developed by Yukihiro Matsumoto 
 (also known as Matz in the Ruby community) in the mid 1990’s in Japan. 
 Stable version 3.2.1
 
